@@ -1,7 +1,5 @@
 package oop;
 
-import service.entity.User;
-
 public class BasicUserService  {
 
     private UserRepository userRepository ;

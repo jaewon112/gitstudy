@@ -3,6 +3,7 @@ package classStudy;
 import java.util.ArrayList;
 import java.util.List;
 
+//싱글톤
  class UserAndAdminRepository {
      List<User> userList = new ArrayList<>();
      private static UserAndAdminRepository instance;
@@ -43,6 +44,8 @@ class UserService {
     void removeUser() {
         UserAndAdminRepository.getInstance().delete();
     }
+
+
 
 }
 
