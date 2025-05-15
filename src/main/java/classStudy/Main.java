@@ -4,11 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 //싱글톤
- class UserAndAdminRepository {
-     List<User> userList = new ArrayList<>();
-     private static UserAndAdminRepository instance;
+class UserAndAdminRepository {
+    List<User> userList = new ArrayList<>();
+    private static UserAndAdminRepository instance;
 
-     private UserAndAdminRepository() {}
+    private UserAndAdminRepository() {}
+
     static UserAndAdminRepository getInstance() {
         if (instance == null) {
             instance = new UserAndAdminRepository();
@@ -16,12 +17,12 @@ import java.util.List;
         return instance;
     }
 
-     void insert() {
+    void insert() {
         userList.add(new User());
         System.out.println("사용자 또는 관리자 정보 추가");
     }
 
-     void delete() {
+    void delete() {
         userList.remove(new User());
         System.out.println("사용자 또는 관리자 정보 삭제");
     }
