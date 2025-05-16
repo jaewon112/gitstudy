@@ -13,9 +13,11 @@ public class LambdaInterface {
         };
         runnable.run();
 
+        // Supplier는 입력 출력값이 없는 인터페이스
         Supplier<Double> supplier = () -> 10.10;
         double d = supplier.get();
 
+        //Consumer 는 출력값만 있는 인터페이스
         Consumer<Integer> consumer = n -> {
             System.out.println("consumer 사용");
             System.out.println("전달받은 매개변수가 하나면 괄호 생략");
@@ -54,8 +56,9 @@ public class LambdaInterface {
             if(data.contains("a")) newDataList.add(data);
             System.out.println(newDataList);
             }
+
         List<String> newDataList2 = dataList.stream().filter(data -> data.contains("a")).collect(Collectors.toList());
-//        Stream<Integer> numStream = List.of(1, 2, 3, 4).stream();
+        Stream<Integer> numStream3 = List.of(1, 2, 3, 4).stream();
         /*
             스트림 구성
             첫번째 단계 -> 스트림 생성

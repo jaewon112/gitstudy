@@ -9,7 +9,10 @@ public class Main8 {
         List<String> words = List.of("bread","milk","egg");
         List<String> newWords = new ArrayList<>();
 
-        // ints 리스트에 integer 자료형으로 옮기시오 -> 업캐스팅
-        List<Double> doubles = List.of(1.12, 2.23, 3.34, 4.45);
+        for (int i = 0; i < words.size(); i++) {
+            newWords.add((i+1+". ") + words.get(i));
+        }
+        System.out.println(newWords);
+
     }
 }

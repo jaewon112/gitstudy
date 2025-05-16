@@ -36,6 +36,7 @@ public class Main7 {
                 studentNames.add(new StudentName(student.getName()));
             }
         }
+
         System.out.println(studentNames);
         for (Student student : students) {
             if (student.getScore() < 85) {
